@@ -21,8 +21,11 @@ We now have the SREC file that can be flashed to all the keys with BootCommander
 
 The first time you compile your program, you need to modify a few files in order to get it to work with OpenBLT.
 Basic instructions were found here : https://www.feaser.com/openblt/doku.php?id=manual:ports:armcm4_stm32f3
+
 Please read them and you can apply them to the following files in MBED OS:
+
 Vector table location: in cmsis_nvic.h edit the following lines:
+
 ```sh
 #define MBED_ROM_START  0x08002000
 #define MBED_ROM_SIZE 0xE000  // 64 KB - 8 KB
